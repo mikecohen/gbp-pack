@@ -2,7 +2,7 @@ class gbp::gbp_neutron_conf() {
 
    neutron_config {
      'DEFAULT/apic_system_id': value => "openstack";
-     'DEFAULT/service_plugins': value => 'group_policy,servicechain,router,lbaas';
+     'DEFAULT/service_plugins': value => 'group_policy,router,lbaas';
      'opflex/networks': value => '*';
      'ml2_cisco_apic/vni_ranges': value => '11000:11100';
      'ml2_cisco_apic/apic_hosts': value => hiera('CONFIG_APIC_CONTROLLER');
