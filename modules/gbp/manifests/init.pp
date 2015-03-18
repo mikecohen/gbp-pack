@@ -49,13 +49,13 @@ class gbp() {
    }
  
    exec { 'get_gbp_ovs_agent':
-      command => "/usr/bin/git clone https://github.com/noironetworks/group-based-policy.git -b noiro $gbpdir",
+      command => "/usr/bin/git clone https://github.com/noironetworks/group-based-policy.git -b stable/juno $gbpdir",
       creates => $gbpdir,
       require => Exec['create_src_dir'],
    }
 
    exec {'get_apicapi':
-      command => "/usr/bin/git clone https://github.com/noironetworks/apicapi.git -b noiro $apicapidir",
+      command => "/usr/bin/git clone https://github.com/noironetworks/apicapi.git -b 1.0.3 $apicapidir",
       creates => $apicapidir,
       require => Exec['create_src_dir'],
    }
@@ -67,7 +67,7 @@ class gbp() {
    }
   
    exec {'get_py_gbp_client':
-      command => "/usr/bin/git clone https://github.com/noironetworks/python-group-based-policy-client.git -b noiro $python_gbpclient_dir", 
+      command => "/usr/bin/git clone https://github.com/noironetworks/python-group-based-policy-client.git -b master $python_gbpclient_dir", 
       creates => $python_gbpclient_dir,
       require => Exec['create_src_dir'],
    }

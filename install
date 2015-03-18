@@ -1,0 +1,4 @@
+cp puppet_templates/* /usr/lib/python2.7/site-packages/packstack/puppet/templates
+cp plugins/* /usr/lib/python2.7/site-packages/packstack/plugins
+mkdir -p /usr/share/openstack-puppet/modules/gbp
+cp -R modules/gbp/* /usr/share/openstack-puppet/modules/gbp

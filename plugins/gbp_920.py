@@ -13,8 +13,7 @@ from packstack.installer.utils import split_hosts
 from packstack.modules.common import filtered_hosts
 from packstack.modules.shortcuts import get_mq
 from packstack.modules.ospluginutils import (getManifestTemplate,
-                                             appendManifestFile,
-                                             createFirewallResources)
+                                             appendManifestFile)
 
 # ------------- Glance Packstack Plugin Initialization --------------
 
