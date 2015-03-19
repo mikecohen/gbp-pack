@@ -10,6 +10,7 @@ class gbp::gbp_neutron_ml2 () {
      'agent/polling_interval': value => "2";
      'agent/l2_population': value => "False";
      'agent/arp_responder': value => "False";
+     'ovs/bridge_mappings': value => hiera('CONFIG_NEUTRON_OVS_BRIDGE_MAPPINGS'); 
    }
 
 }
