@@ -1,8 +1,8 @@
 class gbp::gbp_neutron_conf() {
 
    neutron_config {
-     'DEFAULT/apic_system_id': value => "openstack";
-     'DEFAULT/service_plugins': value => 'group_policy,router,lbaas';
+     'DEFAULT/apic_system_id': value => "gbpdemo";
+     'DEFAULT/service_plugins': value => 'group_policy,servicechain,router,lbaas';
      'opflex/networks': value => '*';
      'ml2_cisco_apic/vni_ranges': value => '11000:11100';
      'ml2_cisco_apic/apic_hosts': value => hiera('CONFIG_APIC_CONTROLLER');
@@ -18,7 +18,7 @@ class gbp::gbp_neutron_conf() {
      'ml2_cisco_apic/apic_name_mapping': value => "use_name";
      'group_policy/policy_drivers': value => 'implicit_policy,apic';
      'group_policy_implicit_policy/default_ip_pool': value => '192.168.0.0/16';
-     'servicechain/servicechain_drivers': value => "chain_with_two_arm_appliance_driver";
+     'servicechain/servicechain_drivers': value => "simplechain_driver";
      'appliance_driver/svc_management_ptg_name': value => "Service-Management";
    }
 
