@@ -49,7 +49,7 @@ class gbp() {
    }
  
    exec { 'get_gbp_ovs_agent':
-      command => "/usr/bin/git clone https://github.com/noironetworks/group-based-policy.git -b master $gbpdir",
+      command => "/usr/bin/git clone https://github.com/noironetworks/group-based-policy.git -b stable/juno $gbpdir",
       creates => $gbpdir,
       require => Exec['create_src_dir'],
    }
