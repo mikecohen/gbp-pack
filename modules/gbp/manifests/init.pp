@@ -55,7 +55,7 @@ class gbp() {
    }
 
    exec {'get_apicapi':
-      command => "/usr/bin/git clone https://github.com/noironetworks/apicapi.git -b 1.0.3 $apicapidir",
+      command => "/usr/bin/git clone https://github.com/noironetworks/apicapi.git -b 1.0.2 $apicapidir",
       creates => $apicapidir,
       require => Exec['create_src_dir'],
    }
