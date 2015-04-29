@@ -17,7 +17,7 @@ class gbp::gbp_automation_ui() {
    }
 
    exec {'get_gbp_automation':
-      command => "/usr/bin/git clone https://github.com/noironetworks/group-based-policy-automation.git -b noiro $gbp_automation_dir",
+      command => "/usr/bin/git clone https://github.com/noironetworks/group-based-policy-automation.git -b stable/juno $gbp_automation_dir",
       creates => $gbp_automation_dir,
       require => Exec['create_src1_dir'],
    }
@@ -46,7 +46,7 @@ class gbp::gbp_automation_ui() {
    }
 
    exec {'get_gbp_ui':
-      command => "/usr/bin/git clone https://github.com/noironetworks/group-based-policy-ui.git -b noiro $gbp_ui_dir",
+      command => "/usr/bin/git clone https://github.com/noironetworks/group-based-policy-ui.git -b stable/juno $gbp_ui_dir",
       creates => $gbp_ui_dir,
       require => Exec['create_src1_dir'],
    }
