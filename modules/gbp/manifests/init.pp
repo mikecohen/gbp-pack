@@ -67,7 +67,7 @@ class gbp() {
    }
   
    exec {'get_py_gbp_client':
-      command => "/usr/bin/git clone https://github.com/noironetworks/python-group-based-policy-client.git -b master $python_gbpclient_dir", 
+      command => "/usr/bin/git clone https://github.com/noironetworks/python-group-based-policy-client.git -b 0.9.1 $python_gbpclient_dir", 
       creates => $python_gbpclient_dir,
       require => Exec['create_src_dir'],
    }
